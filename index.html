@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloudsync</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- AOS Library CSS for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Swiper.js CSS for carousel -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Font Awesome for icons -->
+   <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">cloudsync</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#partners">Our Partners</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section id="home" class="hero">
+    <!-- Left side particles (Pink) -->
+    <div id="particles-left"></div>
+  
+    <!-- Right side particles (Blue) -->
+    <div id="particles-right"></div>
+  
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Welcome to cloudsync</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Synchronize your cloud storage effortlessly.
+      </p>
+      <a href="#services" class="btn" data-aos="fade-up" data-aos-delay="400"
+        >Explore Services</a
+      >
+    </div>
+  </section>
+  
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 data-aos="fade-up">Our Services</h2>
+    <div class="swiper-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        <!-- Service Card 1 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="card-image">
+              <img src="images/Integrationbanner.jpg" alt="Cloud Integration">
+            </div>
+            <div class="card-content">
+              <h3>Cloud Integration</h3>
+              <p>Seamlessly integrate multiple cloud platforms into one unified system.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="card-image">
+              <img src="images/Analyticsbanner.jpg" alt="Data Security">
+            </div>
+            <div class="card-content">
+              <h3>Data Security</h3>
+              <p>Protect your data with our advanced encryption and security protocols.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="card-image">
+              <img src="images/CloudMigration.jpg" alt="24/7 Support">
+            </div>
+            <div class="card-content">
+              <h3>24/7 Support</h3>
+              <p>Our team is available around the clock to assist you with any needs.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider" data-aos="fade-up"></div>
+
+  <!-- Partners Section -->
+  <section id="partners">
+    <h2 data-aos="fade-up">Our Partners</h2>
+    <div class="partners-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="partner">
+        <img src="images/applause-logo.svg" alt="Partner 1">
+      </div>
+      <div class="partner">
+        <img src="images/applause-logo.svg" alt="Partner 2">
+      </div>
+      <div class="partner">
+        <img src="images/CS new logo.jpeg" alt="Partner 3">
+      </div>
+      <div class="partner">
+        <img src="images/Cloudsync (1).png" alt="Partner 4">
+      </div>
+      <!-- Add more partners as needed -->
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-content" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>Cloud Sync is a leading SAP consultancy firm specializing in SAP Cloud Platform Integration (CPI), migrations, cloud connectors, and more. We empower businesses by delivering innovative SAP solutions that streamline processes and enhance operational efficiency.
+
+        Our team of certified SAP experts is dedicated to providing tailored services that meet your unique business needs. From integrating cloud and on-premise applications to migrating legacy systems, we help you navigate your digital transformation journey with confidence.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+    <!-- Parallax Background -->
+    <div class="parallax" id="parallax-about"></div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-header" data-aos="fade-up">
+        <h2>How Can We Assist You?</h2>
+        <p>Just fill in the form below to get in touch with us and we’ll get back to you right away.</p>
+      </div>
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <div class="contact-form" data-aos="fade-right">
+          <form action="#" method="post" id="contactForm">
+            <div class="form-group">
+              <div class="form-field">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Name*</label>
+              </div>
+              <div class="form-field">
+                <input type="text" name="surname" id="surname" required>
+                <label for="surname">Surname*</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" id="email" required>
+              <label for="email">Email*</label>
+            </div>
+            <div class="form-field">
+              <input type="tel" name="phone" id="phone" required>
+              <label for="phone">Phone Number*</label>
+            </div>
+            <div class="form-field">
+              <input type="text" name="company" id="company" required>
+              <label for="company">Company*</label>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        <!-- Contact Details -->
+        <div class="contact-info" data-aos="fade-left">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <h4>Our Email</h4>
+            <p><a href="mailto:Cloudsynctechnologies@gmail.com">Cloudsynctechnologies@gmail.com</a></p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Location</h4>
+            <p>
+              APLUSA TECHNOLOGIES PVT. LTD.<br>
+              11th Floor, Dallas Center, Knowledge City,<br>
+              Survey No 83/1, Plot No A1,<br>
+              Hitech City Main Road,<br>
+              Hyderabad - 500032, Telangana, India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h3>About cloudsync</h3>
+          <p>
+            cloudsync provides seamless cloud integration solutions that empower your workflow. Stay connected and productive with our innovative technology.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#partners">Our Partners</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Cloud Integration</a></li>
+            <li><a href="#services">Data Security</a></li>
+            <li><a href="#services">24/7 Support</a></li>
+            <li><a href="#services">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <h3>Newsletter</h3>
+          <form action="#" method="post" class="newsletter-form">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit"><i class="fas fa-envelope"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 cloudsync. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Libraries -->
+  <!-- AOS Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Swiper.js JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
