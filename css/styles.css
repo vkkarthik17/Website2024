@@ -346,41 +346,262 @@
   }
   
   /* Services Section */
-  .swiper-container {
-    padding-bottom: 50px;
-  }
-  
-  .service-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-  }
-  
-  .service-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    padding: 20px;
-  }
-  
+  /* Services Section */
+section#services {
+  padding: 80px 20px;
+}
+
+section#services h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+/* Swiper Container Adjustments */
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+  display: flex;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+  box-sizing: border-box;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  max-width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
   }
-  
+
   .card-content p {
-    font-size: 1rem;
-    color: var(--secondary-color);
+    font-size: 0.9rem;
   }
-  
+}
+
+  /* Our Expertise Section */
+/* Our Expertise Section */
+.expertise-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.expertise-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+/* Tabs Container */
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tabs Navigation */
+.tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs .tab-link {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: var(--secondary-color);
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+.tabs .tab-link.current {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+/* Ripple Effect on Tabs */
+.tab-link::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 123, 255, 0.2);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
+.tab-link:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tab Content Animations */
+.tab-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: none;
+}
+
+.tab-content.current {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+}
+
+/* Expertise Cards */
+.expertise-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.expertise-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 123, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.expertise-card:hover::before {
+  left: 100%;
+}
+
+.card-content {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.card-content i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.expertise-card:hover i {
+  color: var(--accent-color);
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tabs .tab-link {
+    font-size: 1rem;
+  }
+
+  .card-content i {
+    font-size: 2.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tabs .tab-link {
+    font-size: 1rem;
+  }
+
+  .expertise-card {
+    padding: 30px 15px;
+  }
+
+  .expertise-card i {
+    font-size: 2.5rem;
+  }
+}
+
   /* Divider */
   .section-divider {
     width: 80%;
@@ -839,8 +1060,203 @@
     }
   }
   
-  /* Ensure the menu icon and navigation links stack properly */
-  /* These styles are now within the mobile media query */
-  
-  /* ... Rest of your CSS ... */
-  
+  /* Our Team Section */
+.team-section {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.team-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.team-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team-item h3 {
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item h3 i {
+  margin-right: 10px;
+  color: var(--accent-color);
+}
+
+.team-item p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.parallax#parallax-team {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/ourteam1.jfif'); /* Replace with your image */ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-section {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .team-content h2 {
+    font-size: 2rem;
+  }
+
+  .team-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-item p {
+    font-size: 1rem;
+  }
+}
+.team-content {
+  background-color: #1f1f1f; /* Solid dark background */
+  opacity: 0.9; /* Slight transparency, adjust as needed */
+  border-radius: 20px;
+}
+
+/* end of our partners */
+/* Industries we serve */
+/* Industries We Serve Section */
+.industries-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.industries-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #333333; /* Adjust as needed */
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.industry-card {
+  position: relative;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.industry-card:hover .background-image {
+  transform: scale(1.1); /* Zoom-in effect */
+}
+
+.industry-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay for text readability */
+  transition: background 0.3s ease;
+}
+
+.industry-card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.industry-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.industry-card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .industries-section h2 {
+    font-size: 2rem;
+  }
+
+  .industry-card {
+    height: 150px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .industry-card:hover .background-image {
+    transform: none;
+  }
+
+  .industry-card:hover {
+    transform: none;
+  }
+}
+
+
+/* end of industries we serve */
